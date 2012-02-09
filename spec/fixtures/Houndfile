@@ -12,6 +12,8 @@ backup(:server1) do
     user 'root'
     password ''
     host 'localhost'
+    port '3306'
+    socket '/tmp/mysql.sock'
     databases :all, :except => 'test'
     databases 'db1', 'db2'
     database 'db3'
