@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = BackupHound::VERSION
   s.authors     = ['Artiom Di']
   s.email       = ['kron82@gmail.com']
-  s.homepage    = ''
+  s.homepage    = 'https://github.com/kron4eg/backup_hound'
   s.summary     = %q{Remote backups hound}
   s.description = open('README').read
 
