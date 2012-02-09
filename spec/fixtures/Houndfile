@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 backup(:server1) do
   root '/local/path/to/backup_storage'
   host 'uzer@server1.tld'
