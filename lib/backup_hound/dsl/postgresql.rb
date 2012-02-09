@@ -1,24 +1,13 @@
 # -*- encoding: utf-8 -*-
 
+require 'backup_hound/dsl/abstract_db'
+
 module BackupHound::DSL
   class Postgresql
-    attr_accessor :params
+    include BackupHound::DSL::AbstractDB
 
     def initialize
       @params = {user: 'postgres', password: '', host: 'localhost', port: '5432', socket: '', dbs: []}
-    end
-
-    def database(*args)
-      @params[:dbs] += args
-    end
-    alias :databases :database
-
-    def method_missing(method_name, *args)
-      if @params.include?(method_name)
-        @params[method_name] = args.first
-      else
-        super
-      end
     end
   end
 end
