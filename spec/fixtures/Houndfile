@@ -1,0 +1,31 @@
+backup(:server1) do
+  root '/local/path/to/backup_storage'
+  host 'uzer@server1.tld'
+  port '222'
+  ssh_key = '/path/to/.ssh/server1_public_key'
+
+  store_for 5.days
+
+  mysql do
+    store_for 10.days
+    user 'root'
+    password ''
+    host 'localhost'
+    databases :all, :except => 'test'
+    databases 'db1', 'db2'
+    database 'db3'
+  end
+
+  postgresql do
+    user 'root'
+    password ''
+    host 'localhost'
+    databases :all, :except => 'test'
+    databases 'db1', 'db2', 'db3'
+  end
+
+  rsync do
+    dirs '/remote/dir1', '/remote/dir2'
+    dir '/remote/dir3'
+  end
+end
