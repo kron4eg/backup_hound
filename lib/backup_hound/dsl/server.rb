@@ -2,6 +2,7 @@
 
 require 'backup_hound/dsl/rsync'
 require 'backup_hound/dsl/mysql'
+require 'backup_hound/dsl/postgresql'
 
 module BackupHound::DSL
   class Server
@@ -21,6 +22,12 @@ module BackupHound::DSL
       ms = BackupHound::DSL::Mysql.new
       ms.instance_eval &block
       @params[:mysql] = ms.params.dup
+    end
+
+    def postgresql(&block)
+      pg = BackupHound::DSL::Postgresql.new
+      pg.instance_eval &block
+      @params[:postgresql] = pg.params.dup
     end
 
     def method_missing(method_name, *args, &block)

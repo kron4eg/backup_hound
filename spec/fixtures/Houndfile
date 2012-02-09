@@ -20,9 +20,11 @@ backup(:server1) do
   end
 
   postgresql do
-    user 'root'
+    user 'postgres'
     password ''
     host 'localhost'
+    port '5432'
+    socket '/tmp/postgresql.sock'
     databases :all, :except => 'test'
     databases 'db1', 'db2', 'db3'
   end

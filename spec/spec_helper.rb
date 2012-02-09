@@ -3,6 +3,7 @@
 require 'rubygems' if RUBY_VERSION < '1.9'
 require 'bundler/setup'
 require 'net/ssh/test'
+require 'pp'
 
 require 'backup_hound'
 HOUNDFILE = File.expand_path('spec/fixtures/Houndfile')
