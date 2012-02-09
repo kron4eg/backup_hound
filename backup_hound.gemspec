@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rdoc"
   s.add_development_dependency "rspec"
   s.add_runtime_dependency "net-ssh"
+  s.add_runtime_dependency "open4"
 end
