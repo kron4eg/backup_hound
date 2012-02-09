@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require "backup_hound"
+require 'backup_hound'
