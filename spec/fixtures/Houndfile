@@ -6,7 +6,7 @@ backup(:server1) do
   port '222'
   ssh_key = '/path/to/.ssh/server1_public_key'
 
-  store_for 5.days
+  store_for 5 * 60 * 60 * 24
 
   mysql do
     store_for 10.days
