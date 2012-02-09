@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ['kron82@gmail.com']
   s.homepage    = 'https://github.com/kron4eg/backup_hound'
   s.summary     = %q{Remote backups hound}
-  s.description = open('README').read
+  s.description = open('README.md').read
 
   s.rubyforge_project = 'backup_hound'
 
